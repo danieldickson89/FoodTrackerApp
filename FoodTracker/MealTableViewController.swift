@@ -9,7 +9,7 @@
 import UIKit
 
 class MealTableViewController: UITableViewController {
-    // MARK: Properties
+    // MARK: - Properties
     
     var meals = [Meal]()
     
@@ -90,7 +90,6 @@ class MealTableViewController: UITableViewController {
         }
     }
     
-    
     /*
     // Override to support rearranging the table view.
     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
@@ -105,7 +104,6 @@ class MealTableViewController: UITableViewController {
     return true
     }
     */
-    
     
     // MARK: - Navigation
     
@@ -144,7 +142,7 @@ class MealTableViewController: UITableViewController {
         }
     }
     
-    // MARK: NSCoding
+    // MARK: - NSCoding
     
     func saveMeals() {
         let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(meals, toFile: Meal.ArchiveURL.path!)
